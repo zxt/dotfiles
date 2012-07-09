@@ -1,0 +1,15 @@
+[user]
+	name = Zhao Tang
+	email = zxt@zhaotang.ca
+[core]
+	autocrlf = input
+	editor = vim
+[credential]
+	helper = cache --timeout=3600
+[color]
+	ui = auto
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[include]
+        path = gitconfig.secrets
