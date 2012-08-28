@@ -77,7 +77,7 @@ nmap \ ,
 " vim-powerline
 " --------------------
 let g:Powerline_symbols = 'fancy'
-set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
+set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12,Inconsolata\ for\ Powerline\ Medium\ 12
 
 " --------------------
 " NERDTree
@@ -85,10 +85,12 @@ set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
-" auto open NERDTree if vim starts with no file specified
-autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
-" close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+if has("autocmd")
+  " auto open NERDTree if vim starts with no file specified
+  autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
+  " close vim if the only window left open is a NERDTree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+endif
 
 " --------------------
 " neocomplcache
@@ -106,10 +108,12 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+if has("autocmd")
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+endif
 
 " --------------------------------------------------
 " Regular Vim configuration
@@ -125,13 +129,17 @@ set clipboard+=unnamed  " Yanks go on clipboard instead
 set autowrite           " Writes on various commands that takes one to another file
 set history=100         " Number of things to remember in history
 
+set timeout             " time out on :mappings and key codes
+set timeoutlen=500     " time out on mappings after 500ms
+set ttimeoutlen=100     " time out on key codes after 100ms
+
 set wildmenu            " Turn on wild menu - cmd autocomplete with <TAB>
 set wildmode=longest:full,list:full,full
 set wildignore+=*.o,*.d,*.exe,*.class,*.pyc,*.pyo,.git,.svn " ignore searching these file extensions
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set whichwrap=<,>,[,]          " allow left and right arrow keys to wrap around lines
-set noshowmode                   " don't show mode, vim-powerline takes care of it
+set noshowmode                 " don't show mode, vim-powerline takes care of it
 
 set backup
 set backupdir=~/.vim/backup
@@ -157,9 +165,9 @@ set incsearch           " show search as it is being matched
 set hlsearch            " highlight search
 set showmatch           " briefly jump to matching bracket
 
-set noerrorbells        " don't make a sound when error
-set novisualbell        " don't make screen flash
-set t_vb=               " terminal visual bell not set, no screen flash
+set noerrorbells        " don't make a beep when an error message shown
+set visualbell          " use visual bell instead of beep for other errors
+set t_vb=               " make visual bell do nothing, don't flash screen
 
 set mousehide           " hide mouse when typing, only works in GUI
 set mouse=a             " enable mouse in all modes
