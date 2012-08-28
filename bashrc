@@ -103,3 +103,8 @@ xterm*)
   fi
   ;;
 esac
+
+if [ -f ~/.bashrc_os ];
+then
+  . ~/.bashrc_os
+fi
