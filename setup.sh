@@ -6,3 +6,4 @@ ln -ns ~/dotfiles/vim ~/.vim
 ln -ns ~/dotfiles/vimrc ~/.vimrc
 ln -ns ~/dotfiles/gitconfig ~/.gitconfig
 ln -ns ~/dotfiles/inputrc ~/.inputrc
+ln -ns ~/dotfiles/minttyrc ~/.minttyrc
