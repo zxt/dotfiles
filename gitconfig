@@ -1,15 +1,23 @@
 [user]
-	name = Zhao Tang
-	email = zxt@zhaotang.ca
+  name = Zhao Tang
+  email = zxt@zhaotang.ca
 [core]
-	autocrlf = input
-	editor = vim
+  autocrlf = input
+  editor = vim
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 [color]
-	ui = auto
+  ui = auto
 [alias]
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
 [include]
-        path = gitconfig.secrets
+  path = gitconfig.secrets
