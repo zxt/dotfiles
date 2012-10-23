@@ -54,6 +54,9 @@ Bundle 'itspriddle/vim-jquery'
 " syntax highlighting for json
 Bundle 'leshill/vim-json'
 
+" CoffeeScript support for vim (syntax, indenting, etc.)
+Bundle 'kchmck/vim-coffee-script'
+
 " vimscript library of utility functions and commands for vim programming
 Bundle 'L9'
 
@@ -217,6 +220,8 @@ map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 if has("autocmd")
   "use 4 spaces for indentation in python
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4
+
+  autocmd FileType coffee setlocal shiftwidth=4 softtabstop=4
 
   " Jump to last cursor position when reopening a file
   autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
