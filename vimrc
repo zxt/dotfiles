@@ -157,6 +157,8 @@ set laststatus=2        " always display status line
 set showcmd             " show incomplete commands
 set encoding=utf-8
 
+set listchars=tab:>─,trail:…,eol:¬    "characters to use to represent unprintable characters
+
 set autoindent          " makes lines inherit indentation from previous line
 set expandtab           " use spaces instead of tabs
 set shiftwidth=2        " number of spaces per autoindent
@@ -199,6 +201,9 @@ map <leader>tws :%s/\s\+$//e<CR>
 " but resets other settings, so do not want it on all the time
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+" map <F4> to toggle display of unprintable characters
+nnoremap <F4> :set list! list?<CR>
 
 " spellcheck, with words underlined instead of default block highlighting
 " map <F7> to toggle on/off
