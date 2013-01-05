@@ -7,3 +7,6 @@ ln -ns ~/dotfiles/vimrc ~/.vimrc
 ln -ns ~/dotfiles/gitconfig ~/.gitconfig
 ln -ns ~/dotfiles/inputrc ~/.inputrc
 ln -ns ~/dotfiles/minttyrc ~/.minttyrc
+
+git clone https://github.com/milkbikis/powerline-bash ~/dotfiles/powerline-bash
+ln -s ~/dotfiles/powerline-bash/powerline-bash.py ~/powerline-bash.py
