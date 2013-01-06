@@ -4,7 +4,7 @@
 " ==================================================
 
 "Vundle and bundles configuration
-source bundles.vim
+source ~/.vim/bundles.vim
 
 let mapleader="," " set , as <leader> key
 
