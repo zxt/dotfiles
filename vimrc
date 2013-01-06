@@ -90,7 +90,7 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 if has("autocmd")
   " auto open NERDTree if vim starts with no file specified
-  autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
+  autocmd vimenter * if !argc() | NERDTree | endif
   " close vim if the only window left open is a NERDTree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
