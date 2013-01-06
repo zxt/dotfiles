@@ -30,3 +30,5 @@ ln -fs ~/dotfiles/powerline-bash/powerline-bash.py ~/powerline-bash.py
 
 mkdir vim/backup
 mkdir vim/tmp
+
+vim -u bundles.vim +BundleInstall +qa
