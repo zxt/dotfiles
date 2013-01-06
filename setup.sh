@@ -32,4 +32,4 @@ mkdir vim/backup
 mkdir vim/tmp
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim -u bundles.vim +BundleInstall +qa
+vim -u vim/bundles.vim +BundleInstall +qa
