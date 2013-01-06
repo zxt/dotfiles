@@ -104,14 +104,14 @@ xterm*)
   ;;
 esac
 
-if [ -f ~/.bashrc_os ];
-then
-  . ~/.bashrc_os
-fi
-
 function _update_ps1()
 {
    export PS1="$(~/powerline-bash.py $?)"
 }
 
 export PROMPT_COMMAND="_update_ps1"
+
+if [ -f ~/.bashrc_os ];
+then
+  . ~/.bashrc_os
+fi
