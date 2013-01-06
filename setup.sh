@@ -31,4 +31,5 @@ ln -fs ~/dotfiles/powerline-bash/powerline-bash.py ~/powerline-bash.py
 mkdir vim/backup
 mkdir vim/tmp
 
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -u bundles.vim +BundleInstall +qa
