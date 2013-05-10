@@ -96,8 +96,8 @@ set listchars=tab:>─,trail:…,eol:¬    "characters to use to represent unpri
 
 set autoindent          " makes lines inherit indentation from previous line
 set expandtab           " use spaces instead of tabs
-set shiftwidth=2        " number of spaces per autoindent
-set softtabstop=2       " number of spaces per tab
+set shiftwidth=4        " number of spaces per autoindent
+set softtabstop=4       " number of spaces per tab
 
 set ignorecase          " case insensitive search
 set smartcase           " override ignorecase if typing upper case letters
@@ -158,11 +158,6 @@ imap <F7> <ESC>:set spell!<CR>
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 if has("autocmd")
-  "use 4 spaces for indentation in python
-  autocmd FileType python setlocal shiftwidth=4 softtabstop=4
-
-  autocmd FileType coffee setlocal shiftwidth=4 softtabstop=4
-
   " Jump to last cursor position when reopening a file
   autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g'\"" | endif

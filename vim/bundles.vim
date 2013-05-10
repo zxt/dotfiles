@@ -64,4 +64,8 @@ Bundle 'hallison/vim-markdown'
 " flake8, static syntax and style checker for python
 Bundle 'nvie/vim-flake8'
 
+" cscope, for browsing source code
+Bundle 'chazy/cscope_maps'
+Bundle 'autoload_cscope.vim'
+
 filetype plugin indent on " Automatically detect file types (must turn on after Vundle)
