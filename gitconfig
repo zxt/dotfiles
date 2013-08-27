@@ -21,3 +21,5 @@
   ign = ls-files -o -i --exclude-standard
 [include]
   path = gitconfig.secrets
+[help]
+  autocorrect = 1

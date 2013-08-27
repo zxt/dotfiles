@@ -52,6 +52,9 @@ Bundle 'leshill/vim-json'
 " CoffeeScript support for vim (syntax, indenting, etc.)
 Bundle 'kchmck/vim-coffee-script'
 
+" Scala support
+Bundle 'derekwyatt/vim-scala'
+
 " vimscript library of utility functions and commands for vim programming
 Bundle 'L9'
 
