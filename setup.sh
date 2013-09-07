@@ -25,9 +25,6 @@ ln -fs ~/dotfiles/inputrc ~/.inputrc
 backup ~/.minttyrc
 ln -fs ~/dotfiles/minttyrc ~/.minttyrc
 
-git clone https://github.com/milkbikis/powerline-shell ~/dotfiles/powerline-shell
-ln -fs ~/dotfiles/powerline-shell/powerline-shell.py ~/powerline-shell.py
-
 mkdir vim/backup
 mkdir vim/tmp
 

@@ -18,6 +18,9 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# cd into a directory by just typing its name
+shopt -s autocd
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -104,12 +107,16 @@ xterm*)
   ;;
 esac
 
-function _update_ps1()
-{
-   export PS1="$(~/powerline-shell.py $?)"
+function parse_git_branch {
+   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PROMPT_COMMAND="_update_ps1"
+usercolor='[0;32m'
+cwdcolor='[0;34m'
+gitcolor='[1;31m'
+inputcolor='[0;37m'
+
+export PS1="[\t]\[\e${usercolor}\]\u@\H:\[\e${cwdcolor}\]\w\[\e${gitcolor}\]\$(parse_git_branch)\[\e${inputcolor}\]$"
 
 if [ -f ~/.bashrc_os ];
 then
