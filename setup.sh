@@ -5,7 +5,7 @@
 backup() {
   if [ -L $1 ]; then
     rm $1
-  elif [ -d $1 || -f $1 ]; then
+  elif [ -d $1 ] || [ -f $1 ]; then
     mv $1 $1.old
   fi
 }
@@ -25,8 +25,11 @@ ln -fs ~/dotfiles/inputrc ~/.inputrc
 backup ~/.minttyrc
 ln -fs ~/dotfiles/minttyrc ~/.minttyrc
 
-mkdir vim/backup
-mkdir vim/tmp
+mkdir -p vim/backup
+mkdir -p vim/tmp
 
+if [ -d ~/.vim/bundle/vundle ]; then
+    rm -rf ~/.vim/bundle/vundle
+fi
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -u vim/bundles.vim +BundleInstall +qa
