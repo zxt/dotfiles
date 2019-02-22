@@ -1,74 +1,72 @@
 set nocompatible  " be iMproved
 filetype off      " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " one colorscheme pack to rule them all!
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 " solarized colorscheme for vim
-Bundle 'altercation/vim-colors-solarized'
-
-" The ultimate vim statusline utility
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'altercation/vim-colors-solarized'
 
 " a filesystem tree explorer
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " makes color handling easier
-Bundle 'Rykka/colorv.vim'
+Plugin 'Rykka/colorv.vim'
 
 " a git wrapper so awesome, it should be illegal
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " shows 'Nth match out of M' at every search (index of match+total # matches)
-Bundle 'IndexedSearch'
+Plugin 'IndexedSearch'
 
 " provides insert mode autocompletion for quotes, parens, brackets, etc.
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 " syntax checking
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " highlight matching HTML tags
-Bundle 'gregsexton/MatchTag'
+Plugin 'gregsexton/MatchTag'
 
 " ultimate auto-completion system for vim
-Bundle 'Shougo/neocomplcache'
+Plugin 'Shougo/neocomplcache'
 
 " syntax hightlight + improved indentation for javascript
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 
 " syntax highlighting for jquery
-Bundle 'itspriddle/vim-jquery'
+Plugin 'itspriddle/vim-jquery'
 
 " syntax highlighting for json
-Bundle 'leshill/vim-json'
+Plugin 'leshill/vim-json'
 
 " CoffeeScript support for vim (syntax, indenting, etc.)
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 " Scala support
-Bundle 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-scala'
 
 " vimscript library of utility functions and commands for vim programming
-Bundle 'L9'
+Plugin 'L9'
 
 " enable repeating supported plugin maps with "."
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-repeat'
 
 " markdown syntax highlighting
-Bundle 'hallison/vim-markdown'
+Plugin 'hallison/vim-markdown'
 
 " flake8, static syntax and style checker for python
-Bundle 'nvie/vim-flake8'
+Plugin 'nvie/vim-flake8'
 
 " cscope, for browsing source code
-Bundle 'chazy/cscope_maps'
-Bundle 'autoload_cscope.vim'
+Plugin 'chazy/cscope_maps'
+Plugin 'autoload_cscope.vim'
 
+call vundle#end()
 filetype plugin indent on " Automatically detect file types (must turn on after Vundle)

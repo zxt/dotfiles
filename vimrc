@@ -12,12 +12,6 @@ let mapleader="," " set , as <leader> key
 nmap \ ,
 
 " --------------------
-" vim-powerline
-" --------------------
-let g:Powerline_symbols = 'fancy'
-set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12,Inconsolata\ for\ Powerline\ Medium\ 12
-
-" --------------------
 " NERDTree
 " --------------------
 nnoremap <leader>n :NERDTreeToggle<CR>

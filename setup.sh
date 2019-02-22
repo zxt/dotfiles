@@ -28,8 +28,8 @@ ln -fs ~/dotfiles/minttyrc ~/.minttyrc
 mkdir -p vim/backup
 mkdir -p vim/tmp
 
-if [ -d ~/.vim/bundle/vundle ]; then
-    rm -rf ~/.vim/bundle/vundle
+if [ -d ~/.vim/bundle/Vundle.vim ]; then
+    rm -rf ~/.vim/bundle/Vundle.vim
 fi
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim -u vim/bundles.vim +BundleInstall +qa
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim -u vim/bundles.vim +PluginInstall +qa
