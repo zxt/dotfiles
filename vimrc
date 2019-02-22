@@ -12,6 +12,13 @@ let mapleader="," " set , as <leader> key
 nmap \ ,
 
 " --------------------
+" vim-airline
+" --------------------
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
+
+" --------------------
 " NERDTree
 " --------------------
 nnoremap <leader>n :NERDTreeToggle<CR>

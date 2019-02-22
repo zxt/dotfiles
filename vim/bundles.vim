@@ -13,6 +13,10 @@ Plugin 'flazz/vim-colorschemes'
 " solarized colorscheme for vim
 Plugin 'altercation/vim-colors-solarized'
 
+" status line for vim
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " a filesystem tree explorer
 Plugin 'scrooloose/nerdtree'
 
