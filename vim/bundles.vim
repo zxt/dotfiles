@@ -33,7 +33,7 @@ Plugin 'IndexedSearch'
 Plugin 'Raimondi/delimitMate'
 
 " syntax checking
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 
 " highlight matching HTML tags
 Plugin 'gregsexton/MatchTag'
