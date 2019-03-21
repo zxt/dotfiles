@@ -164,6 +164,8 @@ if has("autocmd")
   " Jump to last cursor position when reopening a file
   autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g'\"" | endif
+
+  autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 endif
 
 iab ymd <C-R>=strftime("%F")<CR>
