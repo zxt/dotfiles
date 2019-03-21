@@ -43,6 +43,8 @@ Plugin 'Shougo/neocomplcache'
 
 " syntax hightlight + improved indentation for javascript
 Plugin 'pangloss/vim-javascript'
+" React JSX syntax highlighting and indenting
+Plugin 'mwx/vim-jsx'
 
 " syntax highlighting for jquery
 Plugin 'itspriddle/vim-jquery'
