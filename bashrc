@@ -118,6 +118,9 @@ inputcolor='[0;37m'
 
 export PS1="[\t]\[\e${usercolor}\]\u@\H:\[\e${cwdcolor}\]\w\[\e${gitcolor}\]\$(parse_git_branch)\[\e${inputcolor}\]$"
 
+pip() ( python -m pip "$@" )
+pip3() ( python3 -m pip "$@" )
+
 if [ -f ~/.bashrc_os ];
 then
   . ~/.bashrc_os
